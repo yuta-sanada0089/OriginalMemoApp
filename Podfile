@@ -10,5 +10,6 @@ target 'pickerdemo' do
     pod 'JBDatePicker'
     pod 'FSCalendar'
     pod 'CalculateCalendarLogic'
+    pod 'LTMorphingLabel'
 
 end

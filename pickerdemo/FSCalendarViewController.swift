@@ -2,7 +2,7 @@
 //  FSCalendarViewController.swift
 //  pickerdemo
 //
-//  Created by 真田雄太 on 2018/04/06.
+//  Created by 真田雄太 on 2018/04/11.
 //  Copyright © 2018年 yutaSanada. All rights reserved.
 //
 
@@ -11,28 +11,28 @@ import FSCalendar
 import CalculateCalendarLogic
 import RealmSwift
 
-class FSCalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarDataSource,FSCalendarDelegateAppearance,UITableViewDataSource,UITableViewDelegate {
-   
+class FSCalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDelegateAppearance,UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var calendar: FSCalendar?
-
-    @IBOutlet weak var TableView: UITableView!
+    @IBOutlet weak var calendar: FSCalendar!
+    @IBOutlet weak var tableView: UITableView!
     
     var date: String!
-    var createdAt: NSData!
     var workoutItem: Results<SavedWorkout>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.calendar?.dataSource = self
-        self.calendar?.delegate = self
+        self.calendar.dataSource = self
+        self.calendar.delegate = self
         
-        TableView.delegate = self
-        TableView.dataSource = self
+        // セルの高さの見積もり値
+        tableView.estimatedRowHeight = 80
+        // セルの制約を基に計算された高さを代入
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.delegate = self
+        tableView.dataSource = self
         
-        view.addSubview(TableView)
-        TableView.reloadData()
+        view.addSubview(tableView)
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,9 +41,10 @@ class FSCalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarDa
     }
     
     fileprivate let gregorian: Calendar = Calendar(identifier: .gregorian)
-    fileprivate lazy var dateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
+    lazy var dateFormatter: DateFormatter = {
+        var formatter = DateFormatter()
+        formatter.timeStyle = .none
+        formatter.dateStyle = .medium
         return formatter
     }()
     
@@ -97,54 +98,47 @@ class FSCalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarDa
     }
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition){
-        
         let selectDay = calendar.selectedDate
         let date = dateFormatter.string(from: selectDay!)
-        print(date)
-//        let selectDay = getDay(date)
-//        print(selectDay)
         
-        DispatchQueue(label: "background").async {
-            let realm = try! Realm()
-            //            var savedItem = [self.workoutItem]
-            print(realm.objects(SavedWorkout.self))
-            let sortedworkoutItem = realm.objects(SavedWorkout.self).filter("createdAt == '\(self.date!)'")
-            print(sortedworkoutItem)
-        }
-        
+        let realm = try! Realm()
+        workoutItem = realm.objects(SavedWorkout.self).filter("createdAt == '\(date)'")
+        tableView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        TableView.reloadData()
+        tableView.reloadData()
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(workoutItem != nil){
             return workoutItem.count
+        } else {
+            return 0
         }
-        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! CustomTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell") as! CustomTableViewCell
         let object = workoutItem[indexPath.row]
         
-        cell.event?.text = object.eventText!
-        cell.weight?.text? = object.weight! + "kg"
-        cell.reps?.text? = object.repLabel!
-        cell.sets?.text? = object.setLabel!
+        cell.eventLB?.text = object.eventText!
+        cell.weightLB?.text? = object.weight! + "kg"
+        cell.repsLB?.text? = object.repLabel!
+        cell.setsLB?.text? = object.setLabel!
         
-        
-        cell.event!.numberOfLines = 0
-        cell.event?.lineBreakMode = NSLineBreakMode.byWordWrapping
-        cell.weight?.numberOfLines = 0
-        cell.weight?.lineBreakMode = NSLineBreakMode.byWordWrapping
-        cell.reps?.numberOfLines = 0
-        cell.reps?.lineBreakMode = NSLineBreakMode.byWordWrapping
-        cell.sets?.numberOfLines = 0
-        cell.sets?.lineBreakMode = NSLineBreakMode.byWordWrapping
-        
+        cell.eventLB!.numberOfLines = 0
+        cell.eventLB?.lineBreakMode = NSLineBreakMode.byWordWrapping
+        cell.weightLB?.numberOfLines = 0
+        cell.weightLB?.lineBreakMode = NSLineBreakMode.byWordWrapping
+        cell.repsLB?.numberOfLines = 0
+        cell.repsLB?.lineBreakMode = NSLineBreakMode.byWordWrapping
+        cell.setsLB?.numberOfLines = 0
+        cell.setsLB?.lineBreakMode = NSLineBreakMode.byWordWrapping
+
         return cell
     }
+    
+
 }

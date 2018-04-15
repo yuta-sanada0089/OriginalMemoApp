@@ -2,6 +2,7 @@ PODS:
   - CalculateCalendarLogic (0.1.6)
   - FSCalendar (2.7.9)
   - JBDatePicker (1.2.5)
+  - LTMorphingLabel (0.5.6)
   - Realm (3.3.0):
     - Realm/Headers (= 3.3.0)
   - Realm/Headers (3.3.0)
@@ -12,15 +13,17 @@ DEPENDENCIES:
   - CalculateCalendarLogic
   - FSCalendar
   - JBDatePicker
+  - LTMorphingLabel
   - RealmSwift
 
 SPEC CHECKSUMS:
   CalculateCalendarLogic: 81b16c24e2b7273fffb03fc29d0c8d1800fd3c9e
   FSCalendar: a04b09f16f811bc92e82f3cf852a15225233b9d5
   JBDatePicker: 0e791c8a79c49b0d37decea28ba147515bf5cfca
+  LTMorphingLabel: bdb51d4682e9822da89da6f567bd8aa456fd6650
   Realm: 7d74ad6c5020432f58fe5e1df90bb6d97b2c7fef
   RealmSwift: b2fa31a09c22e246026766557405505eeaad2b01
 
-PODFILE CHECKSUM: fce0283b6bfb1a6195674de6a22214fd155c7fa3
+PODFILE CHECKSUM: 173e6e2ddbcbb077d2485498e704d0525ac32ccd
 
 COCOAPODS: 1.4.0

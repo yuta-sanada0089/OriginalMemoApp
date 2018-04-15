@@ -13,14 +13,12 @@ class ViewController: UIViewController, UIPickerViewDelegate,UIPickerViewDataSou
     
     @IBOutlet weak var repLabel: UILabel!
     @IBOutlet weak var setLabel: UILabel!
-    
-    
     @IBOutlet weak var eventText: UITextField!
     @IBOutlet weak var weight: UITextField!
     
     @IBOutlet weak var repsetPicker: UIPickerView!
-    let repArray = Array<Int>(1...100)
-    let setArray = Array<Int>(1...30)
+    var repArray = Array<Int>(1...100)
+    var setArray = Array<Int>(1...30)
    
     
     func configure(with savedWorkout: SavedWorkout) {
@@ -32,7 +30,7 @@ class ViewController: UIViewController, UIPickerViewDelegate,UIPickerViewDataSou
         super.viewDidLoad()
         
         let realm = RealmService.shared.realm
-        print(Realm.Configuration.defaultConfiguration.fileURL!)
+//        print(Realm.Configuration.defaultConfiguration.fileURL!)
 
         //// UIPickerViewを生成.
         repsetPicker.delegate = self
@@ -48,7 +46,6 @@ class ViewController: UIViewController, UIPickerViewDelegate,UIPickerViewDataSou
         self.eventText.keyboardType = UIKeyboardType.default
         
         self.weight.delegate = self
-        
     }
     
     
@@ -91,43 +88,56 @@ class ViewController: UIViewController, UIPickerViewDelegate,UIPickerViewDataSou
         }
     }
     
-    func getNowClockString() -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        let now = Date()
-        return formatter.string(from: now)
-    }
-    
-    
+    lazy var dateFormatter: DateFormatter = {
+        var formatter = DateFormatter()
+        formatter.timeStyle = .none
+        formatter.dateStyle = .medium
+        return formatter
+    }()
     
     
     @IBAction func add(_ sender: Any) {
         
         let realm = try! Realm()
+        //idのオートインクリメント
         var maxId: Int { return try! Realm().objects(SavedWorkout.self).sorted(byKeyPath: "id").last?.id ?? 0 }
         let memo = SavedWorkout()
+        let now = Date()
+        
         memo.eventText = eventText.text
         memo.weight = weight.text
         memo.repLabel = repLabel.text
         memo.setLabel = setLabel.text
         memo.id = maxId + 1
-        memo.createdAt = getNowClockString()
+        memo.createdAt = dateFormatter.string(from: now)
         
         try! realm.write {
             realm.add(memo, update: true)
         }
+        //ボタンタップ時のアラート
+        let alert = UIAlertController(title: "保存しました", message: "", preferredStyle: .alert)
+        let deafultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(deafultAction)
+        present(alert, animated: true, completion: nil)
+        
+        //テキスト入力後のキーボードを閉じる
         eventText.endEditing(true)
         weight.endEditing(true)
-    }
+    }//保存ボタンの設定
     
-
+    @IBAction func clear(_ sender: Any) {
+        eventText.text = ""
+        weight.text = ""
+        
+        
+        //テキスト入力後のキーボードを閉じる
+        eventText.endEditing(true)
+        weight.endEditing(true)
+    }//テキストフィールドの値を空にする
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
     }
     
-
-
-
 }
 

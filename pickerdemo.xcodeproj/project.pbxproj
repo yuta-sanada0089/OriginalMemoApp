@@ -8,36 +8,46 @@
 
 /* Begin PBXBuildFile section */
 		A309CCBB206BE6E900C1283F /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A309CCBA206BE6E900C1283F /* RealmService.swift */; };
-		A34F9E04206D2E4E0080C6CD /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34F9E03206D2E4E0080C6CD /* CalendarViewController.swift */; };
-		A3701EFE20793DC800FF586F /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3701EFD20793DC800FF586F /* CustomTableViewCell.swift */; };
+		A3701F00207A308800FF586F /* iPhone8Plus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3701EFF207A308800FF586F /* iPhone8Plus.storyboard */; };
+		A3701F02207A351500FF586F /* iPhoneSE.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3701F01207A351500FF586F /* iPhoneSE.storyboard */; };
+		A3701F08207D267E00FF586F /* FSCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3701F07207D267E00FF586F /* FSCalendarViewController.swift */; };
+		A3701F0A207E525000FF586F /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3701F09207E525000FF586F /* CustomTableViewCell.swift */; };
+		A3701F14207E60D800FF586F /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = A3701F11207E60D700FF586F /* 2.png */; };
+		A3701F15207E60D800FF586F /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = A3701F12207E60D700FF586F /* 1.png */; };
+		A3701F16207E60D800FF586F /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = A3701F13207E60D800FF586F /* 3.png */; };
 		A3765B7B206928CB007AD212 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3765B7D206928CB007AD212 /* RealmSwift.framework */; };
 		A3A94E0320706C53008AB5A6 /* RMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A94E0220706C53008AB5A6 /* RMViewController.swift */; };
+		A3B4008F207FBC7C00620ACD /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B4008E207FBC7C00620ACD /* SplashViewController.swift */; };
 		A3E54717207676C6003C95B4 /* SavedWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E54716207676C6003C95B4 /* SavedWorkout.swift */; };
-		A3E547192077A5AB003C95B4 /* FSCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E547182077A5AB003C95B4 /* FSCalendarViewController.swift */; };
 		A3F39E5C20676E950064BA78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F39E5B20676E950064BA78 /* AppDelegate.swift */; };
 		A3F39E5E20676E950064BA78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F39E5D20676E950064BA78 /* ViewController.swift */; };
 		A3F39E6120676E950064BA78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3F39E5F20676E950064BA78 /* Main.storyboard */; };
 		A3F39E6320676E950064BA78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3F39E6220676E950064BA78 /* Assets.xcassets */; };
-		A3F39E6620676E950064BA78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3F39E6420676E950064BA78 /* LaunchScreen.storyboard */; };
+		A3F39E6620676E950064BA78 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3F39E6420676E950064BA78 /* Splash.storyboard */; };
 		B13597994031A11A796AF49C /* Pods_pickerdemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE61E31E8CD332BE63B9B4C /* Pods_pickerdemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		93E2B05602EF94411588C9B1 /* Pods-pickerdemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pickerdemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pickerdemo/Pods-pickerdemo.debug.xcconfig"; sourceTree = "<group>"; };
 		A309CCBA206BE6E900C1283F /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
-		A34F9E03206D2E4E0080C6CD /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
-		A3701EFD20793DC800FF586F /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		A3701EFF207A308800FF586F /* iPhone8Plus.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = iPhone8Plus.storyboard; sourceTree = "<group>"; };
+		A3701F01207A351500FF586F /* iPhoneSE.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = iPhoneSE.storyboard; sourceTree = "<group>"; };
+		A3701F07207D267E00FF586F /* FSCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSCalendarViewController.swift; sourceTree = "<group>"; };
+		A3701F09207E525000FF586F /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		A3701F11207E60D700FF586F /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 2.png; path = ../../2.png; sourceTree = "<group>"; };
+		A3701F12207E60D700FF586F /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1.png; path = ../../1.png; sourceTree = "<group>"; };
+		A3701F13207E60D800FF586F /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 3.png; path = ../../3.png; sourceTree = "<group>"; };
 		A3765B7C206928CB007AD212 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3765B7D206928CB007AD212 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3A94E0220706C53008AB5A6 /* RMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMViewController.swift; sourceTree = "<group>"; };
+		A3B4008E207FBC7C00620ACD /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		A3E54716207676C6003C95B4 /* SavedWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedWorkout.swift; sourceTree = "<group>"; };
-		A3E547182077A5AB003C95B4 /* FSCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSCalendarViewController.swift; sourceTree = "<group>"; };
 		A3F39E5820676E950064BA78 /* pickerdemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pickerdemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3F39E5B20676E950064BA78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3F39E5D20676E950064BA78 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A3F39E6020676E950064BA78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A3F39E6220676E950064BA78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A3F39E6520676E950064BA78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A3F39E6520676E950064BA78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Splash.storyboard; sourceTree = "<group>"; };
 		A3F39E6720676E950064BA78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A803715A581FC2699615E0D7 /* Pods-pickerdemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pickerdemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-pickerdemo/Pods-pickerdemo.release.xcconfig"; sourceTree = "<group>"; };
 		DEE61E31E8CD332BE63B9B4C /* Pods_pickerdemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pickerdemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,17 +96,22 @@
 		A3F39E5A20676E950064BA78 /* pickerdemo */ = {
 			isa = PBXGroup;
 			children = (
+				A3701F12207E60D700FF586F /* 1.png */,
+				A3701F11207E60D700FF586F /* 2.png */,
+				A3701F13207E60D800FF586F /* 3.png */,
 				A3E54716207676C6003C95B4 /* SavedWorkout.swift */,
 				A3F39E5B20676E950064BA78 /* AppDelegate.swift */,
 				A3F39E5D20676E950064BA78 /* ViewController.swift */,
-				A34F9E03206D2E4E0080C6CD /* CalendarViewController.swift */,
 				A3A94E0220706C53008AB5A6 /* RMViewController.swift */,
 				A309CCBA206BE6E900C1283F /* RealmService.swift */,
-				A3E547182077A5AB003C95B4 /* FSCalendarViewController.swift */,
+				A3701F07207D267E00FF586F /* FSCalendarViewController.swift */,
+				A3701F09207E525000FF586F /* CustomTableViewCell.swift */,
 				A3F39E5F20676E950064BA78 /* Main.storyboard */,
-				A3701EFD20793DC800FF586F /* CustomTableViewCell.swift */,
+				A3701F01207A351500FF586F /* iPhoneSE.storyboard */,
+				A3701EFF207A308800FF586F /* iPhone8Plus.storyboard */,
 				A3F39E6220676E950064BA78 /* Assets.xcassets */,
-				A3F39E6420676E950064BA78 /* LaunchScreen.storyboard */,
+				A3F39E6420676E950064BA78 /* Splash.storyboard */,
+				A3B4008E207FBC7C00620ACD /* SplashViewController.swift */,
 				A3F39E6720676E950064BA78 /* Info.plist */,
 			);
 			path = pickerdemo;
@@ -174,9 +189,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3F39E6620676E950064BA78 /* LaunchScreen.storyboard in Resources */,
+				A3701F14207E60D800FF586F /* 2.png in Resources */,
+				A3F39E6620676E950064BA78 /* Splash.storyboard in Resources */,
 				A3F39E6320676E950064BA78 /* Assets.xcassets in Resources */,
+				A3701F16207E60D800FF586F /* 3.png in Resources */,
 				A3F39E6120676E950064BA78 /* Main.storyboard in Resources */,
+				A3701F02207A351500FF586F /* iPhoneSE.storyboard in Resources */,
+				A3701F00207A308800FF586F /* iPhone8Plus.storyboard in Resources */,
+				A3701F15207E60D800FF586F /* 1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +246,7 @@
 				"${BUILT_PRODUCTS_DIR}/CalculateCalendarLogic/CalculateCalendarLogic.framework",
 				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/JBDatePicker/JBDatePicker.framework",
+				"${BUILT_PRODUCTS_DIR}/LTMorphingLabel/LTMorphingLabel.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
@@ -234,6 +255,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CalculateCalendarLogic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JBDatePicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LTMorphingLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
@@ -249,10 +271,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A34F9E04206D2E4E0080C6CD /* CalendarViewController.swift in Sources */,
 				A3E54717207676C6003C95B4 /* SavedWorkout.swift in Sources */,
-				A3701EFE20793DC800FF586F /* CustomTableViewCell.swift in Sources */,
-				A3E547192077A5AB003C95B4 /* FSCalendarViewController.swift in Sources */,
+				A3701F0A207E525000FF586F /* CustomTableViewCell.swift in Sources */,
+				A3B4008F207FBC7C00620ACD /* SplashViewController.swift in Sources */,
+				A3701F08207D267E00FF586F /* FSCalendarViewController.swift in Sources */,
 				A3F39E5E20676E950064BA78 /* ViewController.swift in Sources */,
 				A3A94E0320706C53008AB5A6 /* RMViewController.swift in Sources */,
 				A3F39E5C20676E950064BA78 /* AppDelegate.swift in Sources */,
@@ -271,12 +293,12 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		A3F39E6420676E950064BA78 /* LaunchScreen.storyboard */ = {
+		A3F39E6420676E950064BA78 /* Splash.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A3F39E6520676E950064BA78 /* Base */,
 			);
-			name = LaunchScreen.storyboard;
+			name = Splash.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -395,6 +417,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D8429S73K7;
 				INFOPLIST_FILE = pickerdemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yutaSanada.pickerdemo;
@@ -410,6 +433,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D8429S73K7;
 				INFOPLIST_FILE = pickerdemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yutaSanada.pickerdemo;

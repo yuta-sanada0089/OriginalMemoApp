@@ -14,9 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         let config = Realm.Configuration(
             // 新しいスキーマバージョンを設定します。以前のバージョンより大きくなければなりません。
             // （スキーマバージョンを設定したことがなければ、最初は0が設定されています）
@@ -39,7 +37,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Realmファイルを開こうとしたときスキーマバージョンが異なれば、
         // 自動的にマイグレーションが実行されます
         let realm = try! Realm()
+        
+        //デバイスを分ける
+        
+        sleep(2)
+        
+        let storyboard:UIStoryboard = self.grabStoryboard()
+        
+        if let window = window{
+            window.rootViewController = storyboard.instantiateInitialViewController() as UIViewController!
+        }
+        
+        self.window?.makeKeyAndVisible()
+        
         return true
+    }
+    
+    func grabStoryboard() -> UIStoryboard {
+        var storyboard = UIStoryboard()
+        var height = UIScreen.main.bounds.size.height
+        
+        if height == 667{
+            storyboard = UIStoryboard(name: "Main", bundle: nil)
+        }else if height == 736{
+            storyboard = UIStoryboard(name: "iPhone8Plus", bundle: nil)
+        }else if height == 568{
+            storyboard = UIStoryboard(name: "iPhoneSE", bundle: nil)
+        }else {
+            storyboard = UIStoryboard(name: "iPhone4", bundle: nil)
+        }
+        return storyboard
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

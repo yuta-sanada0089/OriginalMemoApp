@@ -88,16 +88,22 @@ class RMViewController: UIViewController,UITextFieldDelegate {
         let staminaUpWeight = Double(maxWeight * 0.6)
         staminaUp.text = String("\(staminaUpWeight)kg")
         
+        usingWeight.endEditing(true)
         repCount.endEditing(true)
+        
     }
-    
-    
+    @IBAction func clearValue(_ sender: Any) {
+        usingWeight.text = ""
+        repCount.text = ""
+        maxWeight.text = ""
+        powerUp.text = ""
+        bulkUp.text = ""
+        staminaUp.text = ""
+        maxW.text = ""
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
     }
-    
-   
-
 }
